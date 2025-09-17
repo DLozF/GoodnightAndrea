@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goodnight Messages</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fdf6f0; /* soft cream */
+      color: #444;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d08ca1; /* pastel pink */
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff5f7; /* soft beige/pink */
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .date {
+      font-weight: bold;
+      color: #b05c77;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card.active .message {
+      max-height: 200px; /* expand */
+      opacity: 1;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌙 Goodnight Messages 🌸</h1>
+  
+  <div class="grid">
+    <div class="card">
+      <div class="date">09/10/2025</div>
+      <div class="message">Goodnight my love 💖 sleep well, dream sweet!</div>
+    </div>
+    <div class="card">
+      <div class="date">09/11/2025</div>
+      <div class="message">Buenas noches, princesa ✨ I love you so much!</div>
+    </div>
+    <div class="card">
+      <div class="date">09/12/2025</div>
+      <div class="message">Sweet dreams 🌙 can’t wait to see you tomorrow 💕</div>
+    </div>
+    <!-- Add more cards here -->
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
