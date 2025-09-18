@@ -15,8 +15,11 @@ fetch('messages.json')
       grid.appendChild(card);
 
       // Generate HTML for individual message pages (copy to GitHub manually)
-      createMessagePage(index + 1, msg.date, msg.message);
+      createMessagePage(index + 1, msg.date, msg.text); // Changed from msg.message to msg.text
     });
+  })
+  .catch(error => {
+    console.error('Error loading messages:', error);
   });
 
 function createMessagePage(id, date, message) {
