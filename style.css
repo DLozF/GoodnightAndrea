@@ -1,0 +1,40 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf6f0; /* cream/beige */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #d17a8d; /* pastel pink */
+  margin-bottom: 20px;
+}
+
+#messages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.message-card {
+  background-color: #fde2e4;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.message-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.message-card a {
+  text-decoration: none;
+  color: #d17a8d;
+  font-weight: bold;
+  display: block;
+}
